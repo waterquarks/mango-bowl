@@ -87,7 +87,7 @@ export class DataMapper {
 
     const newAsksSlabItems =
       accountsData.asks !== undefined
-        ? [...new BookSide(undefined!, this._options.market, BookSideLayout.decode(accountsData.asks)).items()]
+        ? [...new BookSide(undefined!, this._options.market, BookSideLayout.decode(accountsData.asks), undefined, 100000).items()]
         : this._asksAccountPerpOrders
 
     const newAsksOrders =
@@ -97,7 +97,7 @@ export class DataMapper {
 
     const newBidsSlabItems =
       accountsData.bids !== undefined
-        ? [...new BookSide(undefined!, this._options.market, BookSideLayout.decode(accountsData.bids)).items()]
+        ? [...new BookSide(undefined!, this._options.market, BookSideLayout.decode(accountsData.bids), undefined, 100000).items()]
         : this._bidsAccountPerpOrders
 
     const newBidsOrders =
